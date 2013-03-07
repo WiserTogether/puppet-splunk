@@ -1,69 +1,69 @@
 # Copyright (C) 2005-2011 Splunk Inc. All Rights Reserved.
 [script://./bin/vmstat.sh]
-interval = 60
+interval = 3600
 sourcetype = vmstat
 source = vmstat
 index = os
 disabled = 0
 
 [script://./bin/iostat.sh]
-interval = 60
+interval = 3600
 sourcetype = iostat
 source = iostat
 index = os
 disabled = 0
 
 [script://./bin/ps.sh]
-interval = 30
+interval = 3600
 sourcetype = ps
 source = ps
 index = os
 disabled = 0
 
 [script://./bin/top.sh]
-interval = 60
+interval = 3600
 sourcetype = top
 source = top
 index = os
 disabled = 0
 
 [script://./bin/netstat.sh]
-interval = 60
+interval = 3600
 sourcetype = netstat
 source = netstat
 index = os
 disabled = 0
 
 [script://./bin/protocol.sh]
-interval = 60
+interval = 3600
 sourcetype = protocol
 source = protocol
 index = os
 disabled = 0
 
 [script://./bin/openPorts.sh]
-interval = 300
+interval = 3600
 sourcetype = openPorts
 source = openPorts
 index = os
 disabled = 0
 
 [script://./bin/time.sh]
-interval = 21600
+interval = 3600
 sourcetype = time
 source = time
 index = os
 disabled = 0
 
 [script://./bin/lsof.sh]
-interval = 600
+interval = 3600
 sourcetype = lsof
 source = lsof
 index = os
 disabled = 0
 
 [script://./bin/df.sh]
-interval = 300
+interval = 3600
 sourcetype = df
 source = df
 index = os
@@ -73,7 +73,7 @@ disabled = 0
 [script://./bin/who.sh]
 sourcetype = who
 source = who
-interval = 150
+interval = 3600
 index = os
 disabled = 0
 
@@ -89,7 +89,7 @@ disabled = 0
 [script://./bin/lastlog.sh]
 sourcetype = lastlog
 source = lastlog
-interval = 300
+interval = 3600
 index = os
 disabled = 0
 
@@ -97,7 +97,7 @@ disabled = 0
 [script://./bin/interfaces.sh]
 sourcetype = interfaces
 source = interfaces
-interval = 60
+interval = 3600
 index = os
 disabled = 0
 
@@ -105,7 +105,7 @@ disabled = 0
 [script://./bin/cpu.sh]
 sourcetype = cpu
 source = cpu
-interval = 30
+interval = 3600
 index = os
 disabled = 0
 
@@ -113,7 +113,7 @@ disabled = 0
 [script://./bin/rlog.sh]
 sourcetype = auditd
 source = auditd
-interval = 60
+interval = 3600
 index = os
 disabled = 0
 
@@ -135,7 +135,7 @@ disabled = 0
 # Watch /etc for file changes
 [fschange:/etc]
 index=os
-pollPeriod = 300
+pollPeriod = 3600
 fullEvent = true
 filesPerDelay=5
 delayInMills=100
@@ -172,6 +172,6 @@ sourcetype = bash_history
 index = os
 
 [monitor:///home/.../.bash_history]
-disabled = true
+disabled = false
 sourcetype = bash_history
 index = os
